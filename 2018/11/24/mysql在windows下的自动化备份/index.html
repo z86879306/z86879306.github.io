@@ -109,6 +109,7 @@
 
 
   <meta name="description" content="今天在公交车上看见公众号的一篇推文讲述的是一个数据库误操作的事件。在线上版本的程序如果发生这样的事情将是一个很大的灾难，可能会造成巨大的损失。想到此处，发觉自己对数据的备份的意识还是太缺失,但是手工备份过于麻烦，且容易忘记。作为一个懒人是不允许这样的事情发生的，程序员应该让计算机帮我们干事情不是吗=。=  Windows下为MySQL做定时备份参考了网上的方案，决定使用 mysqldump备份成s">
+<meta name="keywords" content="备份,自动化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql在windows下的自动化备份">
 <meta property="og:url" content="http://yoursite.com/2018/11/24/mysql在windows下的自动化备份/index.html">
@@ -116,7 +117,7 @@
 <meta property="og:description" content="今天在公交车上看见公众号的一篇推文讲述的是一个数据库误操作的事件。在线上版本的程序如果发生这样的事情将是一个很大的灾难，可能会造成巨大的损失。想到此处，发觉自己对数据的备份的意识还是太缺失,但是手工备份过于麻烦，且容易忘记。作为一个懒人是不允许这样的事情发生的，程序员应该让计算机帮我们干事情不是吗=。=  Windows下为MySQL做定时备份参考了网上的方案，决定使用 mysqldump备份成s">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5122776-b5b8dfd532e38dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-24T02:56:52.794Z">
+<meta property="og:updated_time" content="2018-11-26T02:19:43.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql在windows下的自动化备份">
 <meta name="twitter:description" content="今天在公交车上看见公众号的一篇推文讲述的是一个数据库误操作的事件。在线上版本的程序如果发生这样的事情将是一个很大的灾难，可能会造成巨大的损失。想到此处，发觉自己对数据的备份的意识还是太缺失,但是手工备份过于麻烦，且容易忘记。作为一个懒人是不允许这样的事情发生的，程序员应该让计算机帮我们干事情不是吗=。=  Windows下为MySQL做定时备份参考了网上的方案，决定使用 mysqldump备份成s">
@@ -276,6 +277,23 @@
         
         
           
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -380,16 +398,46 @@
                 
               
 
-              <time title="创建时间：2018-11-24 10:49:55 / 修改时间：10:56:52" itemprop="dateCreated datePublished" datetime="2018-11-24T10:49:55+08:00">2018-11-24</time>
+              <time title="创建时间：2018-11-24 10:49:55" itemprop="dateCreated datePublished" datetime="2018-11-24T10:49:55+08:00">2018-11-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-26 10:19:43" itemprop="dateModified" datetime="2018-11-26T10:19:43+08:00">2018-11-26</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -465,6 +513,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/备份/" rel="tag"># 备份</a>
+          
+            <a href="/tags/自动化/" rel="tag"># 自动化</a>
+          
+        </div>
+      
 
       
       
@@ -483,6 +539,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/26/Hexo使用攻略-添加分类及标签/" rel="prev" title="Hexo使用攻略-添加分类及标签">
+                Hexo使用攻略-添加分类及标签 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -555,14 +615,44 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
