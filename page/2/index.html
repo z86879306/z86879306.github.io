@@ -357,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/23/hexo在多台电脑上的同步/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/mysql在windows下的自动化备份/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cly">
@@ -377,7 +377,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/11/23/hexo在多台电脑上的同步/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">hexo在多台电脑上的同步</a>
+                <a href="/2018/11/24/mysql在windows下的自动化备份/" class="post-title-link" itemprop="http://yoursite.com/page/2/index.html">mysql在windows下的自动化备份</a>
               
             
           </h1>
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2018-11-23 17:10:25" itemprop="dateCreated datePublished" datetime="2018-11-23T17:10:25+08:00">2018-11-23</time>
+              <time title="创建时间：2018-11-24 10:49:55" itemprop="dateCreated datePublished" datetime="2018-11-24T10:49:55+08:00">2018-11-24</time>
             
 
             
@@ -419,11 +419,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-03-08 21:34:37" itemprop="dateModified" datetime="2020-03-08T21:34:37+08:00">2020-03-08</time>
+                <time title="修改时间：2018-11-26 10:19:43" itemprop="dateModified" datetime="2018-11-26T10:19:43+08:00">2018-11-26</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -433,8 +451,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/23/hexo在多台电脑上的同步/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/23/hexo在多台电脑上的同步/" itemprop="commentCount"></span>
+                <a href="/2018/11/24/mysql在windows下的自动化备份/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/mysql在windows下的自动化备份/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -466,26 +484,17 @@
       
         
           
-            <p>最近使用公司的电脑比较多，自己的5年老机子也是有点跟不上了。。<br>在公司的电脑上重新搭建hexo的环境，发现转移起来比较麻烦，没有方便的能同步的方法。</p>
-<p>于是面向百度编程，找到一个比较好用的方法，本来我的hexo博客就是依赖于github的，何不直接在.io项目上新建分支，一个分支保存静态文件，一个分支保存编译前的文件，这样也能通过版本的管理目的。<br>还有一个觉得比较有用的点，也方便以后换电脑的时候转移这些博客的内容。将来我可能已经写了很多的博客吧，嘻嘻~，写程序嘛，就要留有扩展的空间，嗯，没错，这个思想很关键！<br>今年也要好好的把东西记录下来，转载的也好，最好是能自己原创写些东西，能更大程度的加深自己对内容的理解。</p>
-<p>话不多说，ctrl + c 上借鉴来的内容~</p>
-<h2 id="0-解决思路"><a href="#0-解决思路" class="headerlink" title="0 解决思路"></a>0 解决思路</h2><p>使用GitHub的分支！在博客对应的仓库中新建一个分支。一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。</p>
-<h2 id="1-创建分支"><a href="#1-创建分支" class="headerlink" title="1 创建分支"></a>1 创建分支</h2><h3 id="1-1-创建新分支"><a href="#1-1-创建新分支" class="headerlink" title="1.1 创建新分支"></a>1.1 创建新分支</h3><p>命令行操作：</p>
-<p>GitHub操作：</p>
-<p>点击branch按钮，输入新的分支名hexo，点创建。</p>
-<p>1.2 设置默认分支<br>准备在source分支中存放源文件，master中存放生成的网页，因此将hexo设置为默认分支，方便同步文件。</p>
-<p>在仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为hexo，save保存</p>
-<p>2 源文件上传到GitHub<br>选好一个本地文件夹，执行<br>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Simon-Ace/Simon-Ace.github.io.git(替换成你的仓库)</p>
-<p>在克隆到本地的Simon-Ace.github.io中，把除了.git 文件夹外的所有文件都删掉</p>
-<p>把之前我们写的博客源文件全部复制过来，除了.deploy_git</p>
-<p>复制过来的源文件应该有一个.gitignore，用来忽略一些不需要的文件，如果没有的话，自己新建一个，在里面写上如下，表示这些类型文件不需要git：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
-<p>注意，如果你之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为git不能嵌套上传。</p>
-<ol>
-<li>提交更改</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m &quot;add branch&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<p>OK! 之后就是在写完文章之后，发布一下了，当然也不能忘记把 源代码传到 hexo 分支上</p>
+            <p>今天在公交车上看见公众号的一篇推文讲述的是一个数据库误操作的事件。<br>在线上版本的程序如果发生这样的事情将是一个很大的灾难，可能会造成巨大的损失。想到此处，发觉自己对数据的备份的意识还是太缺失,但是手工备份过于麻烦，且容易忘记。<br>作为一个懒人是不允许这样的事情发生的，程序员应该让计算机帮我们干事情不是吗=。=</p>
+<blockquote>
+<h1 id="Windows下为MySQL做定时备份"><a href="#Windows下为MySQL做定时备份" class="headerlink" title="Windows下为MySQL做定时备份"></a><a href="https://www.cnblogs.com/frankielf0921/p/5933127.html" target="_blank" rel="noopener">Windows下为MySQL做定时备份</a></h1><p>参考了网上的方案，决定使用 <strong><a href="http://www.111cn.net/tags.php/mysqldump/" target="_blank" rel="noopener">mysqldump</a>备份成sql文件</strong></p>
+</blockquote>
+<p>废话不多说 直接上代码</p>
+<p>基于公司现使用的服务器是<strong>windows</strong>，虽然我也不知道为什么是windows(很尴尬）</p>
+<p>新建一个 <strong>db_backup.bat</strong> 批处理文件，利用windows自带的任务计划程序做一个定时执行的脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;Ymd=%date:~,4%%date:~5,2%%date:~8,2%&quot;</span><br><span class="line">E:/mysql/mysql-5.7.15-winx64/bin/mysqldump --opt -u root --password=123456 party-build &gt; D:/db_backup/bbs_%Ymd%.sql</span><br><span class="line">@echo on</span><br></pre></td></tr></table></figure></p>
+<p>说明：此方法可以不用关闭数据库，并且可以按每一天的时间来名称备份文件。<br>通过%date:~5,2%来组合得出当前日期，组合的效果为yyyymmdd,date命令得到的日期格式默认为yyyy-mm-dd(如果不是此格式可以通过pause命令来暂停命令行窗口看通过%date:~,20%得到的当前计算机日期格式)，所以通过%date:~5,2%即可得到日期中的第五个字符开始的两个字符，例如今天为2009-02-05,通过%date:~5,2%则可以得到02。（日期的字符串的下标是从0开始的）</p>
+<p>可以先bat 脚本后面增加 pasue 来检查执行结果。任务计划程序的步骤很简单，不再过多的陈述。</p>
+<p>结果：<br><img src="https://upload-images.jianshu.io/upload_images/5122776-b5b8dfd532e38dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="执行结果.png"></p>
+<p>完美~</p>
 
           
         
